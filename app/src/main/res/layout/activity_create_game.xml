@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    tools:context=".CreateGameActivity">
+
+    <ImageView
+        android:id="@+id/soccerChipType"
+        android:layout_width="76dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="170dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/soccer_filter" />
+
+    <ImageView
+        android:id="@+id/basketballChipType"
+        android:layout_width="101dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="170dp"
+        app:layout_constraintStart_toEndOf="@+id/soccerChipType"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bball_filter" />
+
+    <ImageView
+        android:id="@+id/volleyballChipType"
+        android:layout_width="97dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="170dp"
+        app:layout_constraintStart_toEndOf="@+id/tennisChipType"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vball_filter" />
+
+    <ImageView
+        android:id="@+id/tennisChipType"
+        android:layout_width="72dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="170dp"
+        app:layout_constraintStart_toEndOf="@+id/basketballChipType"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tennis_filter" />
+
+    <Button
+        android:id="@+id/createGameButton"
+        android:layout_width="91dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="121dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="#54CED6"
+        android:fontFamily="@font/open_sans"
+        android:onClick="createGame"
+        android:text="Create"
+        android:textSize="12sp"
+        app:iconTint="#00BCD4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="@+id/descriptonGame" />
+
+    <TextView
+        android:id="@+id/createGameTitle"
+        android:layout_width="116dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Create Game"
+        android:textAlignment="center"
+        android:textColor="#0E0C0C"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="336dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="37dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/createGameButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptonGame"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/descriptonGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Description:"
+        android:textColor="#070707"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumberSigned"
+        app:layout_constraintTop_toBottomOf="@+id/numPlayers" />
+
+    <EditText
+        android:id="@+id/editTextNumberSigned"
+        android:layout_width="82dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerSkillLevel"
+        app:layout_constraintEnd_toEndOf="@+id/numPlayers"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/numPlayers"
+        app:layout_constraintTop_toBottomOf="@+id/textView16Prompt"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/numPlayers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:fontFamily="@font/open_sans"
+        android:text="# of Players:"
+        android:textColor="#090808"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.603" />
+
+    <EditText
+        android:id="@+id/editLocation"
+        android:layout_width="0dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="3dp"
+        android:ems="10"
+        android:fontFamily="@font/open_sans"
+        android:inputType="textPersonName"
+        android:textColor="#BDB1B1"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView16Prompt"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationPrompt" />
+
+    <TextView
+        android:id="@+id/locationPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Location:"
+        android:textColor="#050505"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="137dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="36dp"
+        android:ems="10"
+        android:inputType="time"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.373" />
+
+    <TextView
+        android:id="@+id/startTimePrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans"
+        android:text="Start Time:"
+        android:textColor="#050505"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTime"
+        app:layout_constraintStart_toStartOf="@+id/editTextTime"
+        app:layout_constraintTop_toTopOf="@+id/datePrompt"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/datePrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Date:"
+        android:textColor="#040303"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextDate3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/sportTypePrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Sport Type:"
+        android:textColor="#0E0D0D"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createGameName" />
+
+    <TextView
+        android:id="@+id/createGameName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Name:"
+        android:textColor="#050505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editGameName"
+        android:layout_width="322dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:fontFamily="@font/open_sans"
+        android:inputType="textPersonName"
+        android:textColor="#A89C9C"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/createGameName" />
+
+    <Spinner
+        android:id="@+id/spinnerSkillLevel"
+        android:layout_width="186dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="32dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextMultiLine"
+        app:layout_constraintTop_toTopOf="@+id/textView16Prompt" />
+
+    <TextView
+        android:id="@+id/textView16Prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:fontFamily="@font/open_sans"
+        android:text="Skill Level:"
+        android:textColor="#050505"
+        app:layout_constraintStart_toStartOf="@+id/spinnerSkillLevel"
+        app:layout_constraintTop_toTopOf="@+id/numPlayers" />
+
+    <EditText
+        android:id="@+id/editTextDate3"
+        android:layout_width="114dp"
+        android:layout_height="36dp"
+        android:ems="10"
+        android:fontFamily="@font/open_sans"
+        android:inputType="date"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/locationPrompt"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toEndOf="@+id/locationPrompt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.374" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnav4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans"
+        app:itemIconTint="#8F9090"
+        app:itemTextColor="#8F9090"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

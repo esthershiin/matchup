@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MatchUp</string>
+    <string name="game1">I am strong.</string>
+    <string name="game2">I believe in myself.</string>
+    <string name="game3">Each day is a new opportunity to grow and be a better version of myself.</string>
+    <string name="game4">Every challenge in my life is an opportunity to learn from.</string>
+    <string name="game5">I have so much to be grateful for.</string>
+    <string name="game6">Good things are always coming into my life.</string>
+    <string name="game7">New opportunities await me at every turn.</string>
+    <string name="game8">I have the courage to follow my heart.</string>
+    <string name="game9">Things will unfold at precisely the right time.</string>
+    <string name="game10">I will be present in all the moments that this day brings.</string>
+    <string-array name="skillLevels">
+        <item>Beginner</item>
+        <item>Intermediate</item>
+        <item>Advanced</item>
+    </string-array>
+</resources>
