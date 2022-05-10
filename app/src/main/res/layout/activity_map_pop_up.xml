@@ -8,15 +8,15 @@
 
     <View
         android:id="@+id/rectangle2"
-        android:layout_width="411dp"
-        android:layout_height="314dp"
+        android:layout_width="434dp"
+        android:layout_height="366dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="344dp"
         android:background="@drawable/round_rectangle"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -1,10 +1,13 @@
 package com.example.matchup;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ProfileImageActivity extends AppCompatActivity {
 
@@ -12,6 +15,12 @@ public class ProfileImageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_image);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
+        BottomNavigationView navBar = findViewById(R.id.bottomnav10);
+        navBar.setSelectedItemId(R.id.profile);
     }
 
     @Override
@@ -29,11 +38,12 @@ public class ProfileImageActivity extends AppCompatActivity {
                 startActivity(intent);
                 return false;
             case R.id.messages:
-                // stay on 'Messages' screen
+                // go to 'Messages' screen
+                intent = new Intent(this, MessagesActivity.class);
+                startActivity(intent);
                 return false;
             case R.id.profile:
-                intent = new Intent(this, ProfileImageActivity.class);
-                startActivity(intent);
+                // stay on 'Profile' screen
                 return false;
             default:
                 return false;

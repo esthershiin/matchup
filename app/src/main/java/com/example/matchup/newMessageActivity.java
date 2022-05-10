@@ -28,7 +28,7 @@ public class newMessageActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
-        BottomNavigationView navBar = findViewById(R.id.bottomnav7);
+        BottomNavigationView navBar = findViewById(R.id.bottomnav10);
         navBar.setSelectedItemId(R.id.messages);
 
         friend_name = (EditText) findViewById(R.id.friend_name_field);

@@ -60,7 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomnav7"
+        android:id="@+id/bottomnav10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/open_sans"

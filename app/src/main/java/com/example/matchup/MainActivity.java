@@ -163,6 +163,7 @@ public class MainActivity extends AppCompatActivity {
                 soccerButton.setImageResource(R.drawable.soccer_filter);
                 recyclerView.setAdapter(new ItemAdapter(games, context));
                 recyclerView.setHasFixedSize(true);
+                soccerPin1.setVisibility(View.VISIBLE);
             }
         });
 
