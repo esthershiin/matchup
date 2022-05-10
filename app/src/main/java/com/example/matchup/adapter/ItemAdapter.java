@@ -42,15 +42,29 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
             this.join.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    join.setText("JOINED");
+                    String joinedTxt = join.getText().toString();
 
-                    join.setBackgroundColor(Color.GRAY);
+                    if (joinedTxt.equals("JOINED")) {
+                        join.setText("JOIN");
+                        join.setBackgroundColor(Color.parseColor("#54CED6"));
 
-                    String gameName = title.getText().toString();
-                    ArrayList<Game> games = Datasource.allGamesList;
-                    for (Game game: games) {
-                        if (game.title.equals(gameName)) {
-                            game.joined = true;
+                        String gameName = title.getText().toString();
+                        ArrayList<Game> games = Datasource.allGamesList;
+                        for (Game game: games) {
+                            if (game.title.equals(gameName)) {
+                                game.joined = false;
+                            }
+                        }
+                    } else {
+                        join.setText("JOINED");
+                        join.setBackgroundColor(Color.GRAY);
+
+                        String gameName = title.getText().toString();
+                        ArrayList<Game> games = Datasource.allGamesList;
+                        for (Game game : games) {
+                            if (game.title.equals(gameName)) {
+                                game.joined = true;
+                            }
                         }
                     }
                 }
@@ -84,7 +98,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
         if (item.joined) {
             holder.join.setText("JOINED");
             holder.join.setBackgroundColor(Color.GRAY);
-
+        } else {
+            holder.join.setText("JOIN");
+            holder.join.setBackgroundColor(Color.parseColor("#54CED6"));
         }
 
         switch (item.type) {
