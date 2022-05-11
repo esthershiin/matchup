@@ -129,7 +129,7 @@
         android:layout_height="62dp"
         android:layout_marginStart="76dp"
         android:layout_marginTop="172dp"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/soccer_pin"
